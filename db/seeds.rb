@@ -22,3 +22,23 @@ order4 = Order.create(status: "Late", num_items: 4, customer_id: customer3.id, p
 order5 = Order.create(status: "Early", num_items: 2, customer_id: customer2.id, product_id: product2.id)
 
 puts "Seeding done!"
+
+puts
+puts order1.customer.name
+puts
+
+puts order1.product.name
+puts
+
+puts product1.orders.map
+puts
+
+puts customer1.orders.map
+puts
+
+puts order1.print_invoice
+puts
+
+puts order1.total_price
+puts
+

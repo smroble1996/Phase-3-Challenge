@@ -13,7 +13,7 @@ class Order < ActiveRecord::Base
     end
 
     def order_deliver
-        true
+        delivered = true
     end
     
 end
