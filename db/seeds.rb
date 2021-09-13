@@ -1,5 +1,3 @@
-# This will delete any existing rows from the Product and Customer tables
-# so you can run the seed file multiple times without having duplicate entries in your database
 puts "Deleting old data..."
 Product.destroy_all
 Customer.destroy_all
@@ -17,10 +15,10 @@ product4 = Product.create(name: "Ballpoint Pens", price: 2)
 product5 = Product.create(name: "Scotch Tape", price: 3)
 
 puts "Creating orders..."
-# *****************************************************************
-# * TODO: create orders! Remember, an order belongs to a product *
-# * and an order belongs to a customer.                              *
-# *****************************************************************
-# Create Orders Here
+order1 = Order.create(status: "On the way", num_items: 5, customer_id: customer1.id, product_id: product1.id)
+order2 = Order.create(status: "Awaiting", num_items: 3, customer_id: customer2.id, product_id: product3.id)
+order3 = Order.create(status: "Delayed", num_items: 2, customer_id: customer3.id, product_id: product5.id)
+order4 = Order.create(status: "Late", num_items: 4, customer_id: customer3.id, product_id: product4.id)
+order5 = Order.create(status: "Early", num_items: 2, customer_id: customer2.id, product_id: product2.id)
 
 puts "Seeding done!"
